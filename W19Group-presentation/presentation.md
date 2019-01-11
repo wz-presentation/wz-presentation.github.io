@@ -1,7 +1,7 @@
 
 class: center,middle
 
-# Ecosystem of package management systems
+# Ecosystems of package management systems
 
 ### By Wenhan Zhu (Cosmos)
 
@@ -35,7 +35,7 @@ class: middle
 
 - Introduction to Package manager
 
-- Literature Review on recent search on the topic
+- Literature Review on recent research in the area
 
 - Case study on Arch Linux
 
@@ -487,6 +487,31 @@ Real life reason and solution. Compile X with Y disabled then compile Y with X t
 <img src="./tubtd.png" width=500>
 ]
 
+---
+.left-column[
+## Validity
+]
+.right-column[
+
+- Collecting data from AUR
+
+- Parsing *.SRCINFO* files
+
+- Evolution analysis on AUR missing information from deleted packages
+
+]
+
+---
+.left-column[
+## Open Problems
+]
+.right-column[
+
+- How does interests shift between packages
+
+- How does packages update dependencies (interaction between upstream downstream)
+
+]
 ---
 ## References
 
