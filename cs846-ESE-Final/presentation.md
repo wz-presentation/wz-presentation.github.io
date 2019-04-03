@@ -14,9 +14,9 @@ Something
 class: middle
 
 ### RQ1:
-1.1 Which external websites are used to provide information?
+#### 1.1 Which external websites are used to provide information?
 
-1.2 What information is contained in those websites?
+#### 1.2 What information is contained in those websites?
 
 ---
 
@@ -47,11 +47,11 @@ class: middle
 class: center,middle
 .left-seg[
 Process to model the information in top referred SO outlink websites.
-<center><img src='urlProcess.png' width=300></center>
+<center><img src='urlProcess.png' width=350></center>
 ]
 .right-seg[
 K-means elbow estimation results to find best clusters for SO outlink websites
-<center><img src='k-URL.png' width=400></center>
+<center><img src='k-URL.png' width=425></center>
 ]
 ---
 
@@ -69,13 +69,13 @@ The 10 most important words for each URL clusters and the assigned label value
 
 .right-seg[
 Visualizing the k-means clustering on SO outlink websites
-<center><img src='urlPCA.png' width=400></center>
+<center><img src='urlPCA.png' width=425></center>
 ]
 ---
 class: middle
 ### RQ2:
-2.1 Is there a relation between a *GitHub* repository using *Stack Overflow* and its popularity?
-2.2 What are type of projects that utilize *Stack Overflow* code?
+#### 2.1 Is there a relation between a *GitHub* repository using *Stack Overflow* and its popularity?
+#### 2.2 What are type of projects that utilize *Stack Overflow* code?
 
 ---
 class: center, middle
@@ -96,17 +96,17 @@ Statistics on GitHub(GH) Projects that refer StackOverflow(SO) posts
 ]
 .right-seg[
 Star frequency for GH projects in both, SOTorrent and GHTorrent
-<center><img src='strCnt.png' width=400></center>
+<center><img src='strCnt.png' width=500></center>
 ]
 ---
 class:center, middle
 .left-seg[
 Process to model the information in GH projects that refer SO posts.
-<center><img src='ghProcess.png' width=300></center>
+<center><img src='ghProcess.png' width=350></center>
 ]
 .right-seg[
 K-means elbow estimation results to find best clusters for GH projects.
-<center><img src='KEstGH.png' width=300></center>
+<center><img src='KEstGH.png' width=425></center>
 ]
 
 ---
@@ -125,7 +125,7 @@ The 10 most important words for each GH project clusters and the assigned label 
 
 .right-seg[
 Visualizing the k-means clustering on GH projects
-<center><img src='GHTsne4.png' width=300></center>
+<center><img src='GHTsne4.png' width=425></center>
 ]
 
 
