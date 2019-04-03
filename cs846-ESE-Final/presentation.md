@@ -8,15 +8,13 @@ class: center,middle
 ---
 # Introduction
 
-Something
-
 ---
 class: middle
 
 ### RQ1:
-#### 1.1 Which external websites are used to provide information?
+### 1.1 Which external websites are used to provide information?
 
-#### 1.2 What information is contained in those websites?
+### 1.2 What information is contained in those websites?
 
 ---
 
@@ -74,8 +72,8 @@ Visualizing the k-means clustering on SO outlink websites
 ---
 class: middle
 ### RQ2:
-#### 2.1 Is there a relation between a *GitHub* repository using *Stack Overflow* and its popularity?
-#### 2.2 What are type of projects that utilize *Stack Overflow* code?
+### 2.1 Is there a relation between a *GitHub* repository using *Stack Overflow* and its popularity?
+### 2.2 What are type of projects that utilize *Stack Overflow* code?
 
 ---
 class: center, middle
@@ -128,8 +126,85 @@ Visualizing the k-means clustering on GH projects
 <center><img src='GHTsne4.png' width=425></center>
 ]
 
+---
+class: middle
+
+### RQ3: 
+### Are *Stack Overflow* code modified when reused on *GitHub* projects?
 
 ---
+class: middle
+
+### Token Similarity
+
+- Extracted Tokens from code snippets on SO
+
+- Tokenized the file that references SO answer posts
+$$
+Sim(S\_{SO}, F\_{GH}) = \frac{\|MaxSubTokens(T(S\_{SO}), T(F\_{GH}))\|}{\|T(S\_{SO})\|}
+$$
+---
+class: center, middle
+Distribution of similarities for references of SO posts
+<center><img src='tksim.png' width=500></center>
+
+???
+On average a little over half of each code segment reused on GitHub remain the same
+---
+class: middle
+### RQ4:
+### Does code snippets introduced from *Stack Overflow* on *GitHub* evolve over time?
+
+---
+class:center, middle
+
+.left-seg[
+Distribution of number of commits
+<center><img src='noc.png' width=375></center>
+
+]
+
+.right-seg[
+Distribution of number of commits relaxed
+<center><img src='nocr.png' width=375></center>
+
+]
+
+???
+Most code snippets introduced to GH does not get updated or only updates 1 time.
+
+---
+
+### RQ5:
+### Does updates to code snippets originated from *Stack Overflow* on *GitHub* triggers updates to the original post
+
+---
+class: middle
+<center><img src='ghsouc.png' width=600></center>
+
+
+Pearson Correlation: 0.22 ( $p<0.0001$ )
+
+???
+Week to very week correlation
+
+---
+
+## Threats to Validity
+
+### Internal Threat:
+
+- URL Root Domain+95% coverage.
+- URL Title+Description
+- K-Means+(Tf-idf, Ngrams, Stemming, Lemmatization)
+
+### External Threat:
+- Web scraping $\rightarrow$ Bot.
+- SOTorrent reference using Google GitHub data
+- Python code on GH
+
+---
+
 
 class: center, middle
 
