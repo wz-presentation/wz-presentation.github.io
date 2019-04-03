@@ -211,6 +211,8 @@ Most code snippets introduced to GH does not get updated or only updates 1 time.
 
 ---
 
+class: middle
+
 ### RQ5:
 ### Does updates to code snippets originated from *Stack Overflow* on *GitHub* triggers updates to the original post
 
@@ -228,16 +230,17 @@ Week to very week correlation
 
 ## Threats to Validity
 
+### External Threat:
+- Web scraping $\rightarrow$ Bot.
+- SOTorrent reference using Google GitHub data
+- Python code on GH
+
+
 ### Internal Threat:
 
 - URL Root Domain+95% coverage.
 - URL Title+Description
 - K-Means+(Tf-idf, Ngrams, Stemming, Lemmatization)
-
-### External Threat:
-- Web scraping $\rightarrow$ Bot.
-- SOTorrent reference using Google GitHub data
-- Python code on GH
 
 ---
 
