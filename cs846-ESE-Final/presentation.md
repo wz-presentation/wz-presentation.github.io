@@ -6,9 +6,45 @@ class: center,middle
 ### Presentation By Wenhan Zhu (Cosmos), Ankit Vadehra
 
 ---
-# Introduction
+## Introduction & Motivation
+
+### *Stack Overflow*
+
+More than 17 million questions and 26 million answers (as of Mar. 2019)
+
+### *GitHub*
+
+More than 28 million public repositories hosted (as of Jun. 2018)
+
+???
+Information shared to SO
+SO references on GH
 
 ---
+class: middle
+
+## Datasets
+
+- *Stack Overflow* data dump
+
+- *SOTorrent*
+
+- *GHTorrent*
+
+- *Google GitHub* dataset
+
+---
+class: middle
+##  Research questions
+
+1. Where does the external information shared on *Stack Overflow* come from?
+2. Which *GitHub* projects reuse code from *Stack Overflow*?
+3. Are *Stack Overflow* code modified when reused on *GitHub* projects?
+4. Does code snippets introduced from *Stack Overflow* on *GitHub* evolve over time?
+5. Does updates to code snippets originated from *Stack Overflow* on *GitHub* triggers updates to the original post?
+
+---
+
 class: middle
 
 ### RQ1:
