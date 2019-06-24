@@ -13,7 +13,7 @@ class: middle
 
 - Stack Overflow Infrastructure
 
-- Overview of Research using Stack Overflow
+- Overview of Research Regarding Stack Overflow
 
 - Issues with Stack Overflow
 
@@ -47,6 +47,11 @@ class: middle
 - MSR 2015 (Official Data Dump)
 
 - MSR 2019 (SOTorrent)
+
+???
+Official Data Dump est. early 2014
+
+Previous studies has to manually scrap SO
 
 ---
 ### Stack Overflow Infrastructure (Est. Jan. 2014)
@@ -169,7 +174,7 @@ SO questions has a mean of 2 answers.
 .right-column[
 ## Answers
 
-- Fining good answers (Calefato et al.)
+- Finding good answers (Calefato et al.)
 
 - Answers revision (Wang et al.)
 
