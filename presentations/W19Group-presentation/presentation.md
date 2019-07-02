@@ -1,6 +1,7 @@
 
 class: center,middle
 
+Test for git log
 # Ecosystems of package management systems
 
 ### By Wenhan Zhu (Cosmos)
