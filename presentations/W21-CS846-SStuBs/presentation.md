@@ -50,15 +50,8 @@ Source:
 
 ## The creation of the dataset
 
-```{.mermaid im_opt="-H 600" im_fmt="png" im_out="img,fcb" caption="Bug collection process"}
-graph LR
-    id1[Filter commits<br>by keyword<br>e.g., fix, bug]
-    id2[Use SZZ to locate<br>bug inducing change]
-    id3[Parse AST to determine<br>single statement changes]
-    id4[Remove noise<br>e.g., refactoring]
-    id1 --> id2 --> id3 --> id4
-```
 
+![Bug collection process](./sstubs-flow.png)
 
 ## SZZ algorithm
 
@@ -68,20 +61,7 @@ graph LR
 
 ##
 
-```{.mermaid im_opt="-W 400" im_fmt="png" im_out="img,fcb" caption="SZZ algorithm"}
-graph LR
-  A((C1))
-  subgraph bug induce
-  B((C2))
-  end
-  subgraph bug fix
-  C((C3))
-  end
-  D((C4))
-  A -- ... --> B
-  B -- ... --> C
-  C -- ... --> D
-```
+![SZZ algorithm](./szz-algo.png)
 
 1. We start with a bug report in the bug database, indicating a *fixed problem*.
 2. We extract the associated change from the version archive, thus giving us the *location* of the fix.
@@ -95,16 +75,7 @@ graph LR
 
 ## SStuBs and general bugs
 
-```{.mermaid im_opt="-H 600 -s 10" im_fmt="png" im_out="img,fcb" caption="SStuBs or Bugs"}
-graph LR
-  A[Bug fix occurance]
-  I{Fits any pattern?}
-  B[SStuBs]
-  C[Bug]
-  A --> I
-  I -->|Yes| B
-  I -->|No| C
-```
+![SStuBs or Bugs](./sstubs-or-not.png)
 
 ## Example pattern matched
 
@@ -138,19 +109,7 @@ circleArea = r*r*3.1415926
 
 ## Tasks
 
-```{.mermaid im_opt="-W 400" im_fmt="png" im_out="img,fcb" caption="Workflow"}
-graph LR
-  A[Extract bug induce commit]
-  subgraph SStuBs
-  B[Bug fix commit]
-  C[Bug fix location]
-  end
-  D[Retrieve Git repositories]
-  B --> A
-  C --> A
-  B --> D
-  D --> A
-```
+![Workflow](./workflow.png)
 
 ## Immediate catches in SStuBs dataset
 
