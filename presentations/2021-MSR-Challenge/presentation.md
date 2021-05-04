@@ -37,13 +37,13 @@ Integration (e.g., C6) vs Implementation (e.g., C4)
 
 The author information stored in a *Git* commit
 
-### Commit size (i.e., Churn)
-
-Sum of added and removed lines
-
 ### Bug fixing time
 
 Time difference between bug induce and bug fix
+
+### Commit size (i.e., Churn)
+
+Sum of added and removed lines
 
 ## Developers fix their own simple bugs about half of the time
 
