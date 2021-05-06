@@ -3,15 +3,19 @@
 Time limit is 3 minutes. Base on some research on public speech, 100~150 wpm is
 a good pace for presentations.
 
+TODO:
+
+* Make sure no "popping"
+
 ## 1
 
-Hi, everyone, thank you for coming to the talk. My name is Wenhan and I go by
-Cosmos. Today, I'll talk about the project with my supervisor Mike on
+Hi, everyone, thank you for coming to the talk. My name is Wenhan. Today, I'll
+talk about the project with my supervisor Mike on
 
-> Mea culpa, how developers fix their own simple bugs differently from other
-> developers.
+> Mea culpa: how developers fix their own simple bugs differently from those of
+> other developers.
 
-<!-- 44-->
+<!-- MAY-uh CUL-pah-->
 
 ## 2
 
@@ -29,64 +33,62 @@ fix their own bugs differently?
 
 ## 3
 
-So to investigate this problem, we look at the SStuBs dataset which is
-a collection of single statement bugs. Single statement bugs here means bugs
-that are fixed by modifying a single statement in code.
+So to investigate this problem, we use the SStuBs dataset which is a collection
+of single statement bugs that are fixed by modifying a single statement in the
+code base.
 
-We start with the dataset which only contains the bug fix location and the last
-commit where the bug is still present. Then, we use the information to trace
-when the bug is introduced.
+The dataset itself only contains the bug fix location its last appearance. We
+use this information to extract the bug induce commit using an adapted SZZ
+algorithm to work with *Git*.
 
 <!-- 69-->
 
 ## 4
 
-We achieved this by adapting the original SZZ algorithm to work with *Git*.
-When developing using *Git*, bug fix commits sometimes are only introduced to
-the master or now preferred main branch when they are merge from another
-branch. 
+In *Git*, bug fix commits sometimes are only introduced to the master or now
+preferred main branch when they are merge from another branch. 
 
-When this happens, there are two key events, first is the commit where the bug
-fix change happen and the other is the commit where the bug fix change is
-integrated to the main branch.
+When this happens, there are two key events, first, when the bug fix change is
+made in a commit, and the other is when the bug fix commit is merge into the
+code base.
 
-In our work, we use the bug fix commit to determine the author of the
-bug fix.
+In our work, we use the bug fix commit to determine the author of the bug fix.
+Since often, the merge is done by another developer.
 
 <!-- 91-->
 
 ## 5
 
-More specifically, we investigate the difference between same author and
-different author bug fixes by fix time and size.
+We focus on two metrics when investigating whether developers fix their own
+simple bugs differently. How long did it take to fix the bug and how large is
+the bug fix. 
 
-For bug fixing time, since we are interested from the project's perspective, so
-we measure the time difference between the bug is introduced to the project and
-bug fix change is made in to the project.
+We consider the bug fixing time from the project's perspective. So the time is
+determined by when the bug is introduced to the project and when the bug fix is
+merged in to the project. 
 
-Due to the natural of single statement bugs, the intuitive way of calculating
-the churn by the net change will often result in zero. So we use the sum of
-number of added and removed lines to measure code churn.
+We had to diverge a little bit from the common way of calculating commit size
+since the majority of simple bug fixes only modify the lines and results in
+a net change of zero lines. So instead, we use the total number of added and
+removed lines as the size of the bug fix.
 
 <!-- 95-->
 
 ## 6
 
-So first, let's look at how often are single statement bugs fixed by the same
+First, let's look at how often are single statement bugs fixed by the same
 author.
 
-From the SStuBs dataset, about half of the bug fixes are done by the same
-author. In other words, it is also quite common for a single statement bug to
-be fixed by a different author.
+In the SStuBs dataset, about half of the bug fixes are done by the same author.
 
 <!-- 52-->
 
 ## 7
 
-Now, let's look at bug fixing time. 
+Now, let's look at the bug fixing time. 
 
-Single statement bug fixes by a different author spans a wide range. So it
-seems like, these bugs fixed as they are discovered.
+Single statement bug fixes by a different author spans a wide range. These bugs
+are probably fixed as they are discovered down in the line.
 
 On the other hand, most single statement bug fixes by the same author happen
 within the day the bug is introduced!
@@ -98,24 +100,24 @@ within the day the bug is introduced!
 So, what about the fix size then.
 
 There's also a large difference! As you can see here, single statement bug
-fixes are very small and most of them are in a small range, between 2 and 13
-lines to be exact.
+fixes by different developers are small with most of the bug fixes between
+2 and 13 lines.
 
-At the same time, bug fixing changes by the same author can be very large with
-over a quarter of the bug fixes containing changes of larger than 700 lines.
+At the same time, commits containing simple bug fixes by the same developer can
+be very large.
 
 <!-- 71-->
 
 ## 9
 
-Our study suggests that these bug changes might be results from the underlying
-development patters.
+Our observations suggests these effects might come from the different
+underlying development patterns.
 
-Where same author bug fixes are done quickly after the bug is introduced and
-often embedded in a larger commit.
+While some simple bug fixes occur in the development process where it happens
+immediately and is embedded in a larger commit. 
 
-Meanwhile, bug fixes by a different author occurs later in the project life
-time and often only contain the bug fix itself.
+Other simple bugs are discovered later in the project life time and are fixed
+by another developer.
 
 <!-- 57-->
 
