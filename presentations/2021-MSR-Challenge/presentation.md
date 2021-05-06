@@ -1,7 +1,7 @@
 ---
 author:
 - Wenhan Zhu, Michael W. Godfrey
-title: Mea culpa How developers fix their own simple bugs differently from other developers
+title: 'Mea culpa: How developers fix their own simple bugs differently from those of other developers'
 institute: University of Waterloo
 linkstyle: bold
 header-includes:
@@ -61,25 +61,25 @@ Sum of added and removed lines
 
 ![Distribution of bug fix size by authorship](churn.png)
 
-## Patterns of bug fixing
+## Patterns of fixing simple statement bugs
 
 ::: columns
 
 :::: column
 
-### Same author simple bug fix
+### Fixed by same developer:
 
-- Fixed quickly after introducing
-- Often embedded in a larger commit
+- Fixed soon after bug introduced
+- Fix often embedded inside larger commit that "does more"
 
 ::::
 
 :::: column
 
-### Difference author simple bug fix
+### Fixed by different developer:
 
-- Occur sometime after the bug in introduced
-- The commit often does only fixes the bug
+- Fix often occurs after a significant delay
+- Fix is short, basically just fixes the bug and nothing more
 
 ::::
 
